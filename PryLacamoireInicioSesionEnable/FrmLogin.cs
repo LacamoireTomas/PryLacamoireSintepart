@@ -78,63 +78,122 @@ namespace PryLacamoireInicioSesionEnable
         {
             //Adam
             if (TxtUsuario.Text == ("Adm") &&
-                TxtPassword.Text == ("@1a") &&
-                LstModulo.Text == "ADM" || LstModulo.Text == "VTA" || LstModulo.Text == "COM")
+                TxtPassword.Text == ("@1a"))
+            { if (LstModulo.Text == "ADM" || LstModulo.Text == "VTA" || LstModulo.Text == "COM")
 
-            {
-                this.Hide();   // oculta este formualrio
-                FrmBienvenida f = new FrmBienvenida(); // crea el FrmBienvenida
-                f.Text = TxtUsuario.Text;// asigna el texto de título
-                f.ShowDialog(); ; // visualiza y ejecuta el FrmBienvenida
-                this.Show(); // Muestra el nuevo formulario
+                {
+                    this.Hide();   // oculta este formualrio
+                    FrmBienvenida f = new FrmBienvenida(); // crea el FrmBienvenida
+                    f.Text = TxtUsuario.Text;// asigna el texto de título
+                    f.ShowDialog(); ; // visualiza y ejecuta el FrmBienvenida
+                    this.Show(); // Muestra el nuevo formulario
+                }
+                else
+                {
+                    MessageBox.Show("Datos incorrectos. Acceso Denegado.");
+                    intentos++; // incrementa el contador de intentos fallidos
+                    if (intentos == 2) // si se falla 2 veces cierra el formulario
+                    {
+                        MessageBox.Show("Usted excedió la cantidad de intentos permitida");
+                        this.Close();
+                    }
 
 
 
+
+                }
             }
+
+
             else
             {
 
                 //John
                 if (TxtUsuario.Text == ("John") &&
-                TxtPassword.Text == ("*2b") &&
+                TxtPassword.Text == ("*2b"))
+                {
+
+                    if (
                 LstModulo.Text == "SIST")
 
-                {
-                    this.Hide();   // oculta este formualrio
-                    FrmBienvenida f = new FrmBienvenida(); // crea el FrmBienvenida
-                    f.Text = TxtUsuario.Text;// asigna el texto de título
-                    f.ShowDialog(); ; // visualiza y ejecuta el FrmBienvenida
-                    this.Show(); // Muestra el nuevo formulario
+
+                    {
+                        this.Hide();   // oculta este formualrio
+                        FrmBienvenida f = new FrmBienvenida(); // crea el FrmBienvenida
+                        f.Text = TxtUsuario.Text;// asigna el texto de título
+                        f.ShowDialog(); ; // visualiza y ejecuta el FrmBienvenida
+                        this.Show(); // Muestra el nuevo formulario
 
 
 
+                    }
+                    else
+                    {
+                        MessageBox.Show("Datos incorrectos. Acceso Denegado.");
+                        intentos++; // incrementa el contador de intentos fallidos
+                        if (intentos == 2) // si se falla 2 veces cierra el formulario
+                        {
+                            MessageBox.Show("Usted excedió la cantidad de intentos permitida");
+                            this.Close();
+                        }
+
+
+
+
+                    }
                 }
                 //Ceci
                 if (TxtUsuario.Text == ("Ceci") &&
-                TxtPassword.Text == ("*@3c") &&
-                LstModulo.Text == "ADM" || LstModulo.Text == "VTA")
-
-
-
+                TxtPassword.Text == ("*@3c"))
                 {
-                    this.Hide();   // oculta este formualrio
-                    FrmBienvenida f = new FrmBienvenida(); // crea el FrmBienvenida
-                    f.Text = TxtUsuario.Text;// asigna el texto de título
-                    f.ShowDialog(); ; // visualiza y ejecuta el FrmBienvenida
-                    this.Show(); // Muestra el nuevo formulario
+                    if (LstModulo.Text == "ADM" || LstModulo.Text == "VTA")
+                    {
+                        this.Hide();   // oculta este formualrio
+                        FrmBienvenida f = new FrmBienvenida(); // crea el FrmBienvenida
+                        f.Text = TxtUsuario.Text;// asigna el texto de título
+                        f.ShowDialog(); ; // visualiza y ejecuta el FrmBienvenida
+                        this.Show(); // Muestra el nuevo formulario
+                    }
+                    else
+                    {
+                        MessageBox.Show("Datos incorrectos. Acceso Denegado.");
+                        intentos++; // incrementa el contador de intentos fallidos
+                        if (intentos == 2) // si se falla 2 veces cierra el formulario
+                        {
+                            MessageBox.Show("Usted excedió la cantidad de intentos permitida");
+                            this.Close();
+                        }
+
+
+
+
+                    }
+
                 }
+
+
+
+
+
+
+
                 //Gooood
                 if (TxtUsuario.Text == ("God") &&
-                TxtPassword.Text == ("@#4d") &&
-                LstModulo.Text == "SIST" || LstModulo.Text == "ADM" || LstModulo.Text == "VTA" || LstModulo.Text == "COM")
+                TxtPassword.Text == ("@#4d"))
+
+
 
 
                 {
-                    this.Hide();   // oculta este formualrio
-                    FrmBienvenida f = new FrmBienvenida(); // crea el FrmBienvenida
-                    f.Text = TxtUsuario.Text;// asigna el texto de título
-                    f.ShowDialog(); ; // visualiza y ejecuta el FrmBienvenida
-                    this.Show(); // Muestra el nuevo formulario
+                    if (LstModulo.Text == "SIST" || LstModulo.Text == "ADM" || LstModulo.Text == "VTA" || LstModulo.Text == "COM")
+                    {
+
+                        this.Hide();   // oculta este formualrio
+                        FrmBienvenida f = new FrmBienvenida(); // crea el FrmBienvenida
+                        f.Text = TxtUsuario.Text;// asigna el texto de título
+                        f.ShowDialog(); ; // visualiza y ejecuta el FrmBienvenida
+                        this.Show(); // Muestra el nuevo formulario
+                    }
                 }
                 else
                 {
